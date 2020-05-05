@@ -39,5 +39,8 @@ include_directories(${GLEW_INCLUDE_DIRS})
 find_package(glfw3 3 REQUIRED)
 include_directories(${GLFW3_INCLUDE_DIRS})
 
+message("Test")
+message(${GLFW3_LIBRARIES})
+
 target_link_libraries(minimalOpenGL ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES} ${GLFW3_LIBRARIES})
 
