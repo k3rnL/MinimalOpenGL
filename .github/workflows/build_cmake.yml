@@ -96,6 +96,11 @@ jobs:
           key: ${{ matrix.config.name }}-ccache-${{ steps.ccache_cache_timestamp.outputs.timestamp }}
           restore-keys: |
             ${{ matrix.config.name }}-ccache-
+
+      - name: Install Linux dependencies
+          if: matrix.os == 'ubuntu-latest'
+          run: sudo apt-get install libglfw3-dev libglew-dev mesa-common-dev
+
       - name: Configure
         shell: cmake -P {0}
         run: |
