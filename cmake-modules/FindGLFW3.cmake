@@ -49,11 +49,13 @@ ELSEIF(MSVC)
 ENDIF()
 
 find_library(GLFW3_LIBRARIES
-        NAMES glfw3dll glfw3
+        NAMES glfw3dll glfw3 glfw
         HINTS
         "${DEPENDS_DIR}/glfw"
         "$ENV{ProgramW6432}/glfw"
         "${GLFW_ROOT}"
+        "/usr/lib/"
+        "/usr/lib/x86_64-linux-gnu"
         ENV GLFW_ROOT
         PATH_SUFFIXES
         lib
