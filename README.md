@@ -6,6 +6,9 @@ This program just show a blue shaded square, but do all the primary stuff :
 - Create a buffer and store our data inside
 - Draw call in a simple loop
 
+You can use this code to start your new project from scratch without the pain of writing the very first running code.
+This code is fully functional, and should work on very old version of OpenGL, minimum accepted is 1.40.
+
 ## Compilation
 
 You can compile this project using cmake, the code is multi-platform.
