@@ -98,7 +98,7 @@ jobs:
             ${{ matrix.config.name }}-ccache-
 
       - name: Install Linux dependencies
-          if: matrix.os == 'ubuntu-latest'
+          if: matrix.config.os == 'ubuntu-latest'
           run: sudo apt-get install libglfw3-dev libglew-dev mesa-common-dev
 
       - name: Configure
